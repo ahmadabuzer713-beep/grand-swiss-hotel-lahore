@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Swiss Hotel & Apartments Lahore | Luxury Stays in Johar Town</title>
+    <meta name="description" content="Experience luxury, comfort & excellence at Grand Swiss Hotel & Apartments Lahore. Premium rooms & suites in Johar Town. Book direct for best rates.">
+    <meta name="keywords" content="Best Hotel in Johar Town Lahore, Luxury Hotel in Lahore, Grand Swiss Hotel Lahore, Hotels near Expo Center Lahore, Family Hotel in Johar Town">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 50: '#E8EEF7', 100: '#D1DDF0', 200: '#A3BBE1', 300: '#7599D2', 400: '#4777C3', 500: '#0B1F3A', 600: '#091830', 700: '#071226', 800: '#050C1A', 900: '#030610' },
+                        gold: { 50: '#FBF5E6', 100: '#F7EBCD', 200: '#EFD79B', 300: '#E7C369', 400: '#DFAF37', 500: '#D4AF37', 600: '#AA8C2C', 700: '#806921', 800: '#554616', 900: '#2B230B' },
+                        silver: { 50: '#F8F9FB', 100: '#F0F2F5', 200: '#E1E5EB', 300: '#C2CAD6', 400: '#A3AFC1', 500: '#8494AC' }
+                    },
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Grand Swiss Hotel & Apartments Lahore",
+        "description": "Experience luxury, comfort & excellence in Johar Town, Lahore",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "MA, 756-G4 Fatimiyya Road, Block G4, Phase 2",
+            "addressLocality": "Johar Town",
+            "addressRegion": "Lahore",
+            "addressCountry": "PK"
+        },
+        "telephone": "+92-303-6311489",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "reviewCount": "350"
+        },
+        "priceRange": "$$$",
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Complimentary Breakfast", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Room Service", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Family Rooms", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "24/7 Front Desk", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Airport Transfer", "value": true}
+        ]
+    }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8F9FB; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #AA8C2C; }
+
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #D4AF37, #E7C369); z-index: 9999; transition: width 0.1s ease; }
+
+        .glass { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-dark { background: rgba(11, 31, 58, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(212, 175, 55, 0.15); }
+
+        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+        .hero-video-container::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(11,31,58,0.7) 0%, rgba(11,31,58,0.5) 50%, rgba(11,31,58,0.9) 100%); }
+        .hero-video-container video { width: 100%; height: 100%; object-fit: cover; }
+
+        .text-gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #E7C369 50%, #D4AF37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        .animated-underline { position: relative; }
+        .animated-underline::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #D4AF37, #E7C369); transition: width 0.4s ease; }
+        .animated-underline:hover::after { width: 100%; }
+
+        .card-lift { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-lift:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgba(11, 31, 58, 0.25); }
+
+        .parallax-bg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+        .masonry-grid { column-count: 3; column-gap: 1rem; }
+        @media (max-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (max-width: 480px) { .masonry-grid { column-count: 1; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
+
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px; }
+
+        .loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0B1F3A; z-index: 99999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.8s ease, visibility 0.8s ease; }
+        .loading-screen.hidden { opacity: 0; visibility: hidden; }
+        .loader { width: 60px; height: 60px; border: 3px solid rgba(212, 175, 55, 0.2); border-top-color: #D4AF37; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .counter-value { font-variant-numeric: tabular-nums; }
+
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .floating { animation: float 3s ease-in-out infinite; }
+
+        @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+        .pulse-ring::before { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #D4AF37; animation: pulse-ring 2s ease-out infinite; }
+
+        .reveal { opacity: 0; transform: translateY(40px); }
+        .reveal.active { opacity: 1; transform: translateY(0); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        body, .dark-mode-transition { transition: background-color 0.5s ease, color 0.5s ease; }
+
+        .custom-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; }
+
+        input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.5) sepia(1) saturate(5) hue-rotate(10deg); cursor: pointer; }
+
+        img { opacity: 0; transition: opacity 0.5s ease; }
+        img.loaded { opacity: 1; }
+
+        .urgency-banner { background: linear-gradient(90deg, #0B1F3A, #1a3a5c, #0B1F3A); background-size: 200% 100%; animation: shimmer 3s linear infinite; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+        .tooltip { position: relative; }
+        .tooltip::after { content: attr(data-tooltip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); padding: 6px 12px; background: #0B1F3A; color: #D4AF37; font-size: 12px; border-radius: 6px; white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s ease; pointer-events: none; font-family: 'Inter', sans-serif; }
+        .tooltip:hover::after { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-4px); }
+
+        .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .mobile-menu.open { transform: translateX(0); }
+
+        .star-filled { color: #D4AF37; }
+        .star-empty { color: #C2CAD6; }
+
+        .booking-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(212, 175, 55, 0.2); }
+        .dark .booking-glass { background: rgba(11, 31, 58, 0.95); border: 1px solid rgba(212, 175, 55, 0.3); }
+
+        .section-divider { width: 80px; height: 3px; background: linear-gradient(90deg, #D4AF37, #E7C369); margin: 0 auto; }
+
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom-container img { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .img-zoom-container:hover img { transform: scale(1.08); }
+
+        .card-gradient-overlay { background: linear-gradient(to top, rgba(11,31,58,0.9) 0%, rgba(11,31,58,0.4) 50%, transparent 100%); }
+
+        .quote-mark { font-size: 6rem; line-height: 1; color: rgba(212, 175, 55, 0.15); font-family: 'Playfair Display', serif; }
+
+        .attraction-card { position: relative; overflow: hidden; }
+        .attraction-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,31,58,0.95) 0%, rgba(11,31,58,0.3) 60%, transparent 100%); z-index: 1; transition: opacity 0.4s ease; }
+        .attraction-card:hover::before { opacity: 0.85; }
+
+        .input-focus:focus { border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); outline: none; }
+
+        .newsletter-input:focus { border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2); }
+
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-3px); color: #D4AF37; }
+
+        .map-container { position: relative; overflow: hidden; border-radius: 16px; }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
+        @keyframes badge-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .badge-pulse { animation: badge-pulse 2s ease-in-out infinite; }
+
+        .price-tag { background: linear-gradient(135deg, #D4AF37, #E7C369); color: #0B1F3A; font-weight: 700; }
+
+        .availability-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: dot-pulse 2s ease-in-out infinite; }
+        @keyframes dot-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        .gallery-filter-active { background: linear-gradient(135deg, #D4AF37, #E7C369); color: #0B1F3A; }
+
+        .feature-tag { background: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.2); }
+
+        .why-icon { background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05)); border: 1px solid rgba(212,175,55,0.2); }
+
+        .amenity-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .amenity-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(11, 31, 58, 0.12); }
+        .amenity-card:hover .amenity-icon { transform: scale(1.1) rotate(5deg); }
+        .amenity-icon { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .contact-card { transition: all 0.3s ease; }
+        .contact-card:hover { transform: translateY(-4px); border-color: #D4AF37; }
+
+        .footer-link { position: relative; transition: color 0.3s ease; }
+        .footer-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #D4AF37; transition: width 0.3s ease; }
+        .footer-link:hover::after { width: 100%; }
+
+        .navbar-scrolled { box-shadow: 0 4px 30px rgba(11, 31, 58, 0.15); }
+        .dark .navbar-scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); }
+
+        .toast { position: fixed; bottom: 30px; right: 30px; padding: 16px 24px; background: #0B1F3A; color: white; border-radius: 12px; border-left: 4px solid #D4AF37; box-shadow: 0 10px 40px rgba(0,0,0,0.3); z-index: 10001; transform: translateX(150%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); font-family: 'Inter', sans-serif; }
+        .toast.show { transform: translateX(0); }
+
+        @media (max-width: 640px) { .hero-title { font-size: 2.5rem !important; } .section-title { font-size: 2rem !important; } }
+        @media print { .no-print { display: none !important; } body { background: white !important; color: black !important; } }
+    </style>
+</head>
+<body class="font-inter text-gray-800 bg-silver-50 dark:bg-navy-900 dark:text-gray-100 overflow-x-hidden">
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader mb-6"></div>
+        <h2 class="font-playfair text-2xl text-gold-400 tracking-wider">Grand Swiss</h2>
+        <p class="text-silver-300 text-sm mt-2 tracking-widest uppercase">Hotel & Apartments</p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" class="scroll-progress" style="width: 0%"></div>
+
+    <!-- Urgency Banner -->
+    <div id="urgencyBanner" class="urgency-banner text-white py-2 px-4 text-center text-sm font-medium fixed top-0 left-0 w-full z-[9998] transform -translate-y-full transition-transform duration-500">
+        <div class="flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <span>Limited rooms available! Book now for best rates — Free Cancellation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[9990] transition-all duration-500">
+        <div id="navInner" class="mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-4 transition-all duration-500">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg group-hover:shadow-gold-400/30 transition-shadow">
+                        <span class="font-playfair text-navy-900 font-bold text-lg">GS</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="font-playfair text-xl font-bold text-white leading-tight">Grand Swiss</h1>
+                        <p class="text-xs text-gold-400 tracking-widest uppercase">Hotel & Apartments</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Home</a>
+                    <a href="#about" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">About</a>
+                    <a href="#rooms" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Rooms</a>
+                    <a href="#amenities" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Amenities</a>
+                    <a href="#gallery" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Gallery</a>
+                    <a href="#reviews" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Reviews</a>
+                    <a href="#contact" class="text-white/90 hover:text-gold-400 text-sm font-medium animated-underline transition-colors">Contact</a>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="flex items-center gap-4">
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-gold-400 transition-colors tooltip" data-tooltip="Toggle Dark Mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark:hidden"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </button>
+
+                    <!-- Book Now Button -->
+                    <a href="#booking" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-gold-400/30 transition-all transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        Book Now
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="lg:hidden w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-gold-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menuIcon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-navy-900/98 backdrop-blur-xl z-[9991] p-8 flex flex-col">
+        <button id="mobileMenuClose" class="self-end w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-gold-400 transition-colors mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <div class="flex flex-col gap-6">
+            <a href="#home" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Home</a>
+            <a href="#about" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">About</a>
+            <a href="#rooms" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Rooms & Suites</a>
+            <a href="#amenities" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Amenities</a>
+            <a href="#gallery" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Gallery</a>
+            <a href="#reviews" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Reviews</a>
+            <a href="#booking" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Book Now</a>
+            <a href="#contact" class="mobile-nav-link text-white text-lg font-medium hover:text-gold-400 transition-colors">Contact</a>
+        </div>
+        <div class="mt-auto">
+            <a href="tel:+923036311489" class="flex items-center gap-3 text-gold-400 hover:text-gold-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="font-medium">+92 303 6311489</span>
+            </a>
+        </div>
+    </div>
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/60 z-[9990] hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-hotel-lobby-4837-large.mp4" type="video/mp4">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80" alt="Grand Swiss Hotel" class="w-full h-full object-cover">
+            </video>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
+            <!-- Floating Review Badge -->
+            <div class="floating inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass mb-8 badge-pulse">
+                <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span class="text-white font-bold text-sm">4.1</span>
+                </div>
+                <span class="text-white/80 text-sm">|</span>
+                <span class="text-white/80 text-sm">350+ Google Reviews</span>
+                <div class="availability-dot ml-1"></div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="hero-title font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 reveal">
+                Welcome to <br>
+                <span class="text-gold-gradient">Grand Swiss</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-white/80 font-light mb-4 reveal" style="transition-delay: 0.2s">
+                Hotel & Apartments Lahore
+            </p>
+            <p class="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-12 reveal" style="transition-delay: 0.3s">
+                Experience Luxury, Comfort & Excellence in the Heart of Johar Town
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 reveal" style="transition-delay: 0.4s">
+                <a href="#booking" class="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-gold-400/30 transition-all transform hover:scale-105 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                    Reserve Your Stay
+                </a>
+                <a href="#rooms" class="px-8 py-4 glass text-white font-semibold text-lg rounded-full hover:bg-white/20 transition-all flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>
+                    Explore Rooms
+                </a>
+            </div>
+        </div>
+
+        <!-- Booking Widget -->
+        <div class="absolute bottom-0 left-0 w-full z-20 px-4 pb-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="booking-glass rounded-2xl p-6 sm:p-8 shadow-2xl reveal" style="transition-delay: 0.5s">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-600 dark:text-gold-400 uppercase tracking-wider mb-2">Check-In</label>
+                            <div class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                <input type="date" id="checkInDate" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white text-sm input-focus transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-600 dark:text-gold-400 uppercase tracking-wider mb-2">Check-Out</label>
+                            <div class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                <input type="date" id="checkOutDate" class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white text-sm input-focus transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-600 dark:text-gold-400 uppercase tracking-wider mb-2">Guests</label>
+                            <div class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <select id="guestSelect" class="w-full pl-10 pr-10 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white text-sm custom-select input-focus transition-all">
+                                    <option value="1">1 Guest</option>
+                                    <option value="2" selected>2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-600 dark:text-gold-400 uppercase tracking-wider mb-2">Room Type</label>
+                            <div class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>
+                                <select id="roomTypeSelect" class="w-full pl-10 pr-10 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white text-sm custom-select input-focus transition-all">
+                                    <option value="all">All Rooms</option>
+                                    <option value="deluxe">Deluxe Room</option>
+                                    <option value="executive">Executive Suite</option>
+                                    <option value="family">Family Apartment</option>
+                                    <option value="studio">Luxury Studio</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="checkAvailabilityBtn" class="w-full py-3 bg-gradient-to-r from-navy-500 to-navy-700 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-navy-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            Check Availability
+                        </button>
+                    </div>
+                    <!-- Best Price Guarantee -->
+                    <div class="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-gray-100 dark:border-navy-700">
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/><path d="M3 3v9h9"/></svg>
+                            <span>Free Cancellation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-32 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <a href="#about" class="flex flex-col items-center gap-2 text-white/50 hover:text-gold-400 transition-colors">
+                <span class="text-xs tracking-widest uppercase">Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-silver-50 dark:bg-navy-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Grid -->
+                <div class="relative reveal">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Luxury Hotel Room" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-xl aspect-square">
+                                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80" alt="Hotel Exterior" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-xl aspect-square">
+                                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Hotel Lobby" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div class="img-zoom-container rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
+                                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Hotel Dining" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-gold-500 to-gold-400 text-navy-900 p-6 rounded-2xl shadow-2xl">
+                        <div class="text-4xl font-playfair font-bold">10+</div>
+                        <div class="text-sm font-semibold">Years of<br>Excellence</div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-[2px] bg-gold-500"></div>
+                        <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">About Us</span>
+                    </div>
+                    <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-6 leading-tight">
+                        Where Luxury Meets <br><span class="text-gold-gradient">Pakistani Hospitality</span>
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                        Nestled in the prestigious Johar Town neighborhood of Lahore, Grand Swiss Hotel & Apartments offers an unparalleled blend of Swiss precision and Pakistani warmth. Our meticulously designed spaces provide the perfect sanctuary for both business and leisure travelers.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                        Located just minutes from Expo Center Lahore and Emporium Mall, our prime location ensures you are never far from the city's finest attractions. Whether you are visiting for a corporate event, family vacation, or romantic getaway, we promise an experience that exceeds every expectation.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 rounded-xl bg-white dark:bg-navy-800 shadow-sm">
+                            <div class="counter-value text-3xl font-playfair font-bold text-gold-500" data-target="50">0</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Luxury Rooms</div>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-white dark:bg-navy-800 shadow-sm">
+                            <div class="counter-value text-3xl font-playfair font-bold text-gold-500" data-target="350">0</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Happy Guests</div>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-white dark:bg-navy-800 shadow-sm">
+                            <div class="counter-value text-3xl font-playfair font-bold text-gold-500" data-target="15">0</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">Amenities</div>
+                        </div>
+                    </div>
+
+                    <a href="#rooms" class="inline-flex items-center gap-2 text-gold-500 font-semibold hover:text-gold-600 transition-colors group">
+                        Explore Our Rooms
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms & Suites Section -->
+    <section id="rooms" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-white dark:bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Accommodations</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Rooms & <span class="text-gold-gradient">Suites</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Discover our collection of meticulously designed rooms and suites, each offering a unique blend of comfort, style, and modern amenities.
+                </p>
+            </div>
+
+            <!-- Room Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Deluxe Room -->
+                <div class="card-lift bg-white dark:bg-navy-700 rounded-2xl overflow-hidden shadow-lg group reveal" style="transition-delay: 0.1s">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Deluxe Room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 price-tag px-3 py-1 rounded-full text-sm">
+                            PKR 8,500<span class="text-xs font-normal">/night</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 card-gradient-overlay p-4">
+                            <h3 class="font-playfair text-xl font-bold text-white">Deluxe Room</h3>
+                            <p class="text-white/70 text-sm">25 sqm | City View</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg> WiFi</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg> AC</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg> TV</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4 8 6"/><path d="M17 19v2"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="m9 15 1.5-2.5"/><path d="m15 15-1.5-2.5"/><path d="M11 12v.01"/><path d="M7 3v.01"/><path d="M17 3v.01"/><path d="M21 8v.01"/><path d="M21 12v.01"/></svg> Bath</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <span class="text-sm font-semibold text-navy-900 dark:text-white">4.5</span>
+                                <span class="text-xs text-gray-400">(120 reviews)</span>
+                            </div>
+                            <button onclick="bookRoom('Deluxe Room', 8500)" class="px-4 py-2 bg-navy-500 text-white text-sm font-semibold rounded-lg hover:bg-navy-600 transition-colors">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Suite -->
+                <div class="card-lift bg-white dark:bg-navy-700 rounded-2xl overflow-hidden shadow-lg group reveal" style="transition-delay: 0.2s">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Executive Suite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 price-tag px-3 py-1 rounded-full text-sm">
+                            PKR 15,000<span class="text-xs font-normal">/night</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">Popular</div>
+                        <div class="absolute bottom-0 left-0 right-0 card-gradient-overlay p-4">
+                            <h3 class="font-playfair text-xl font-bold text-white">Executive Suite</h3>
+                            <p class="text-white/70 text-sm">45 sqm | Panoramic View</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg> WiFi</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg> AC</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6.01" y1="2" y2="2"/><line x1="10" x2="10.01" y1="2" y2="2"/><line x1="14" x2="14.01" y1="2" y2="2"/></svg> Mini Bar</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/><path d="M12 4v9"/></svg> Living</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <span class="text-sm font-semibold text-navy-900 dark:text-white">4.8</span>
+                                <span class="text-xs text-gray-400">(95 reviews)</span>
+                            </div>
+                            <button onclick="bookRoom('Executive Suite', 15000)" class="px-4 py-2 bg-navy-500 text-white text-sm font-semibold rounded-lg hover:bg-navy-600 transition-colors">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Apartment -->
+                <div class="card-lift bg-white dark:bg-navy-700 rounded-2xl overflow-hidden shadow-lg group reveal" style="transition-delay: 0.3s">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Family Apartment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 price-tag px-3 py-1 rounded-full text-sm">
+                            PKR 18,500<span class="text-xs font-normal">/night</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 card-gradient-overlay p-4">
+                            <h3 class="font-playfair text-xl font-bold text-white">Family Apartment</h3>
+                            <p class="text-white/70 text-sm">65 sqm | Garden View</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg> WiFi</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" x2="18" y1="17" y2="17"/></svg> Kitchen</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 4 Guests</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg> Family</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <span class="text-sm font-semibold text-navy-900 dark:text-white">4.6</span>
+                                <span class="text-xs text-gray-400">(78 reviews)</span>
+                            </div>
+                            <button onclick="bookRoom('Family Apartment', 18500)" class="px-4 py-2 bg-navy-500 text-white text-sm font-semibold rounded-lg hover:bg-navy-600 transition-colors">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Studio -->
+                <div class="card-lift bg-white dark:bg-navy-700 rounded-2xl overflow-hidden shadow-lg group reveal" style="transition-delay: 0.4s">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Luxury Studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <div class="absolute top-4 left-4 price-tag px-3 py-1 rounded-full text-sm">
+                            PKR 12,000<span class="text-xs font-normal">/night</span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-gold-500 text-navy-900 px-3 py-1 rounded-full text-xs font-bold">New</div>
+                        <div class="absolute bottom-0 left-0 right-0 card-gradient-overlay p-4">
+                            <h3 class="font-playfair text-xl font-bold text-white">Luxury Studio</h3>
+                            <p class="text-white/70 text-sm">35 sqm | Pool View</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg> WiFi</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg> AC</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg> Pool</span>
+                            <span class="feature-tag px-2 py-1 rounded-md text-xs flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg> Gym</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <span class="text-sm font-semibold text-navy-900 dark:text-white">4.7</span>
+                                <span class="text-xs text-gray-400">(57 reviews)</span>
+                            </div>
+                            <button onclick="bookRoom('Luxury Studio', 12000)" class="px-4 py-2 bg-navy-500 text-white text-sm font-semibold rounded-lg hover:bg-navy-600 transition-colors">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-silver-50 dark:bg-navy-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Facilities</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    World-Class <span class="text-gold-gradient">Amenities</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Every detail has been carefully considered to ensure your stay is nothing short of extraordinary.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.05s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Free WiFi</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">High-Speed Internet</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.1s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Breakfast</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Complimentary</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.15s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Parking</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Free & Secure</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.2s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Room Service</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">24/7 Available</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.25s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Air Conditioning</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Climate Control</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.3s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Family Rooms</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Spacious & Comfortable</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.35s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">24/7 Front Desk</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Always Available</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.4s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7l-1.7 5.4c-.2.6 0 1.2.5 1.5l8.7 5.4c.5.3 1.1.3 1.6-.1l3.9-2.5c.5-.3.8-1 .6-1.5z"/><path d="m15 5 3 3"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Airport Transfer</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">On Request</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.45s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Laundry Service</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Same Day</p>
+                </div>
+
+                <div class="amenity-card bg-white dark:bg-navy-800 p-6 rounded-2xl text-center shadow-sm reveal" style="transition-delay: 0.5s">
+                    <div class="amenity-icon w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Conference</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Meeting Rooms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-white dark:bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Why Us</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    The Grand Swiss <span class="text-gold-gradient">Difference</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Discover why discerning travelers choose Grand Swiss Hotel & Apartments for their Lahore stay.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal" style="transition-delay: 0.1s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Prime Johar Town Location</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Strategically located in Johar Town, minutes from Expo Center, Emporium Mall, and major business hubs. Easy access to all of Lahore's attractions.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Luxury Interiors</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Every room features premium furnishings, marble bathrooms, and bespoke decor. Experience Swiss-inspired elegance with Pakistani warmth.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.3s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Luxury does not have to break the bank. We offer competitive rates without compromising on quality, service, or comfort.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.4s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Exceptional Hospitality</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Our dedicated team goes above and beyond to make your stay memorable. Personalized service with genuine Pakistani warmth.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.5s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Secure Parking</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Complimentary covered parking with 24/7 security surveillance. Travel with peace of mind knowing your vehicle is safe.
+                    </p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.6s">
+                    <div class="why-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy-900 dark:text-white mb-3">Family-Friendly</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Spacious family apartments, kid-friendly amenities, and a welcoming environment make us the perfect choice for family stays.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-silver-50 dark:bg-navy-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Gallery</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Explore Our <span class="text-gold-gradient">Spaces</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Take a visual journey through our luxurious accommodations and world-class facilities.
+                </p>
+            </div>
+
+            <!-- Gallery Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+                <button class="gallery-filter gallery-filter-active px-6 py-2 rounded-full text-sm font-medium transition-all" data-filter="all">All</button>
+                <button class="gallery-filter px-6 py-2 rounded-full text-sm font-medium bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 hover:bg-gold-100 dark:hover:bg-gold-900/20 transition-all" data-filter="rooms">Rooms</button>
+                <button class="gallery-filter px-6 py-2 rounded-full text-sm font-medium bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 hover:bg-gold-100 dark:hover:bg-gold-900/20 transition-all" data-filter="exterior">Exterior</button>
+                <button class="gallery-filter px-6 py-2 rounded-full text-sm font-medium bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 hover:bg-gold-100 dark:hover:bg-gold-900/20 transition-all" data-filter="dining">Dining</button>
+                <button class="gallery-filter px-6 py-2 rounded-full text-sm font-medium bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 hover:bg-gold-100 dark:hover:bg-gold-900/20 transition-all" data-filter="lobby">Lobby</button>
+                <button class="gallery-filter px-6 py-2 rounded-full text-sm font-medium bg-white dark:bg-navy-800 text-gray-600 dark:text-gray-300 hover:bg-gold-100 dark:hover:bg-gold-900/20 transition-all" data-filter="facilities">Facilities</button>
+            </div>
+
+            <!-- Masonry Gallery -->
+            <div class="masonry-grid reveal" id="galleryGrid">
+                <div class="masonry-item gallery-item" data-category="rooms">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Deluxe Room Interior" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="lobby">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80" alt="Grand Lobby" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="dining">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Fine Dining" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="rooms">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Executive Suite" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="exterior">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hotel Exterior Night" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="facilities">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1575425186775-b8de9a427e67?w=600&q=80" alt="Swimming Pool" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="lobby">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Reception Area" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="dining">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Breakfast Buffet" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="rooms">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Luxury Studio" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="facilities">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Fitness Center" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="exterior">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Hotel Garden" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+                <div class="masonry-item gallery-item" data-category="facilities">
+                    <div class="img-zoom-container rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Conference Room" class="w-full rounded-xl" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white/80 hover:text-white z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Gallery Image">
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-white dark:bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Testimonials</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Guest <span class="text-gold-gradient">Reviews</span>
+                </h2>
+                <div class="flex items-center justify-center gap-4 mt-6">
+                    <div class="flex items-center gap-2">
+                        <span class="text-5xl font-playfair font-bold text-gold-500">4.1</span>
+                        <div class="flex flex-col items-start">
+                            <div class="flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">350+ Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Carousel -->
+            <div class="relative overflow-hidden reveal">
+                <div id="reviewsTrack" class="flex gap-6 transition-transform duration-600">
+                    <!-- Review 1 -->
+                    <div class="min-w-[350px] md:min-w-[400px] bg-silver-50 dark:bg-navy-700 p-8 rounded-2xl shadow-sm">
+                        <div class="quote-mark leading-none mb-4">"</div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            Absolutely fantastic experience! The staff went above and beyond to make our family vacation special. The rooms were immaculate and the breakfast was delicious. Will definitely return!
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-navy-900 font-bold">AK</div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 dark:text-white">Ahmed Khan</h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-green-500 flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                        Verified Guest
+                                    </span>
+                                    <span class="text-xs text-gray-400">2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="min-w-[350px] md:min-w-[400px] bg-silver-50 dark:bg-navy-700 p-8 rounded-2xl shadow-sm">
+                        <div class="quote-mark leading-none mb-4">"</div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            Perfect location for business travelers. Close to Expo Center and major corporate offices. The WiFi was excellent and the conference facilities were top-notch. Highly recommended!
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-navy-400 to-navy-600 flex items-center justify-center text-white font-bold">SR</div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 dark:text-white">Sara Rahman</h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-green-500 flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                        Verified Guest
+                                    </span>
+                                    <span class="text-xs text-gray-400">1 month ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="min-w-[350px] md:min-w-[400px] bg-silver-50 dark:bg-navy-700 p-8 rounded-2xl shadow-sm">
+                        <div class="quote-mark leading-none mb-4">"</div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            We stayed in the Family Apartment and it was perfect for our group of 5. The kitchen facilities were great, and the kids loved the pool. The staff was incredibly accommodating.
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-navy-900 font-bold">MF</div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 dark:text-white">Muhammad Farooq</h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-green-500 flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                        Verified Guest
+                                    </span>
+                                    <span class="text-xs text-gray-400">3 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="min-w-[350px] md:min-w-[400px] bg-silver-50 dark:bg-navy-700 p-8 rounded-2xl shadow-sm">
+                        <div class="quote-mark leading-none mb-4">"</div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                            The best hotel in Johar Town by far! Beautiful interiors, excellent service, and the location cannot be beat. The complimentary breakfast had so many options. Worth every penny!
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-navy-400 to-navy-600 flex items-center justify-center text-white font-bold">NA</div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 dark:text-white">Nadia Ali</h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-green-500 flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                        Verified Guest
+                                    </span>
+                                    <span class="text-xs text-gray-400">2 months ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex justify-center gap-4 mt-8">
+                    <button id="prevReview" class="w-12 h-12 rounded-full bg-white dark:bg-navy-700 shadow-md flex items-center justify-center text-navy-900 dark:text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button id="nextReview" class="w-12 h-12 rounded-full bg-white dark:bg-navy-700 shadow-md flex items-center justify-center text-navy-900 dark:text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions Section -->
+    <section id="attractions" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-silver-50 dark:bg-navy-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Explore Lahore</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Nearby <span class="text-gold-gradient">Attractions</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Discover Lahore's most iconic landmarks and attractions, all within easy reach from our prime Johar Town location.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Expo Center -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.1s">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Expo Center Lahore" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Expo Center Lahore</h3>
+                        <p class="text-white/80 text-sm mb-3">Major exhibitions, trade shows, and corporate events venue</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                2.5 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                8 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emporium Mall -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.2s">
+                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80" alt="Emporium Mall" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Emporium Mall</h3>
+                        <p class="text-white/80 text-sm mb-3">Lahore's largest shopping and entertainment destination</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                3.2 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                10 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fortress Stadium -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.3s">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="Fortress Stadium" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Fortress Stadium</h3>
+                        <p class="text-white/80 text-sm mb-3">Historic sports complex and recreational area</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                7.5 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                20 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minar-e-Pakistan -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.4s">
+                    <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&q=80" alt="Minar-e-Pakistan" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Minar-e-Pakistan</h3>
+                        <p class="text-white/80 text-sm mb-3">Iconic national monument and historical landmark</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                12 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                30 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lahore Museum -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.5s">
+                    <img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=600&q=80" alt="Lahore Museum" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Lahore Museum</h3>
+                        <p class="text-white/80 text-sm mb-3">Pakistan's largest museum with rich historical artifacts</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                14 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                35 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badshahi Mosque -->
+                <div class="attraction-card rounded-2xl overflow-hidden shadow-lg h-80 reveal" style="transition-delay: 0.6s">
+                    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80" alt="Badshahi Mosque" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 z-[2] p-6 flex flex-col justify-end">
+                        <h3 class="font-playfair text-2xl font-bold text-white mb-2">Badshahi Mosque</h3>
+                        <p class="text-white/80 text-sm mb-3">Mughal-era architectural masterpiece and spiritual center</p>
+                        <div class="flex items-center gap-4 text-white/70 text-xs">
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                15 km
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                38 min drive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-navy-500 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-12 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Reservations</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-white mb-4">
+                    Book Your <span class="text-gold-gradient">Stay</span>
+                </h2>
+                <p class="text-white/60 max-w-2xl mx-auto">
+                    Secure your reservation today and enjoy exclusive direct booking benefits. Best price guaranteed.
+                </p>
+            </div>
+
+            <div class="bg-white dark:bg-navy-800 rounded-3xl p-8 sm:p-12 shadow-2xl reveal">
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Full Name</label>
+                            <input type="text" id="bookingName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all" placeholder="Your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Email Address</label>
+                            <input type="email" id="bookingEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all" placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Phone Number</label>
+                            <input type="tel" id="bookingPhone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all" placeholder="+92 300 1234567">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Room Type</label>
+                            <select id="bookingRoomType" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white custom-select input-focus transition-all">
+                                <option value="">Select Room Type</option>
+                                <option value="deluxe">Deluxe Room - PKR 8,500/night</option>
+                                <option value="executive">Executive Suite - PKR 15,000/night</option>
+                                <option value="family">Family Apartment - PKR 18,500/night</option>
+                                <option value="studio">Luxury Studio - PKR 12,000/night</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Check-In Date</label>
+                            <input type="date" id="bookingCheckIn" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Check-Out Date</label>
+                            <input type="date" id="bookingCheckOut" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Number of Guests</label>
+                            <select id="bookingGuests" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white custom-select input-focus transition-all">
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-navy-900 dark:text-white mb-2">Special Requests</label>
+                        <textarea id="bookingRequests" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all resize-none" placeholder="Any special requirements or requests..."></textarea>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="bookingTerms" required class="custom-checkbox mt-1">
+                        <label for="bookingTerms" class="text-sm text-gray-600 dark:text-gray-300">
+                            I agree to the terms and conditions and understand that this is a reservation request subject to availability confirmation.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-gold-400/30 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                        Confirm Reservation
+                    </button>
+
+                    <div class="flex items-center justify-center gap-6 pt-4 border-t border-gray-100 dark:border-navy-700">
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/><path d="M3 3v9h9"/></svg>
+                            <span>Free Cancellation</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-white dark:bg-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Get in Touch</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Contact <span class="text-gold-gradient">Us</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    We are here to assist you with your reservation and answer any questions you may have.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-6 reveal">
+                    <div class="contact-card bg-silver-50 dark:bg-navy-700 p-6 rounded-2xl border border-transparent">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Address</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">MA, 756-G4 Fatimiyya Road, Block G4, Phase 2, Johar Town, Lahore, Punjab, Pakistan</p>
+                                <p class="text-gold-500 text-xs mt-1">Plus Code: F799+VW Lahore</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-silver-50 dark:bg-navy-700 p-6 rounded-2xl border border-transparent">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Phone</h3>
+                                <a href="tel:+923036311489" class="text-gray-600 dark:text-gray-300 text-sm hover:text-gold-500 transition-colors">+92 303 6311489</a>
+                                <p class="text-gray-400 text-xs mt-1">Available 24/7 for reservations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-silver-50 dark:bg-navy-700 p-6 rounded-2xl border border-transparent">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Email</h3>
+                                <a href="mailto:info@grandswisslahore.com" class="text-gray-600 dark:text-gray-300 text-sm hover:text-gold-500 transition-colors">info@grandswisslahore.com</a>
+                                <p class="text-gray-400 text-xs mt-1">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-silver-50 dark:bg-navy-700 p-6 rounded-2xl border border-transparent">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Check-In / Check-Out</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Check-In: 2:00 PM</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Check-Out: 10:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/923036311489" target="_blank" class="flex items-center justify-center gap-3 w-full py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-all transform hover:scale-[1.02] shadow-lg shadow-green-500/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Map -->
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="map-container h-full min-h-[400px] shadow-xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.1234567890123!2d74.29876543210987!3d31.46987654321098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919012345678901%3A0xabcdef1234567890!2sGrand%20Swiss%20Hotel%20%26%20Apartments!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Grand Swiss Hotel Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 xl:px-12 bg-gradient-to-r from-navy-500 to-navy-700">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-white mb-4">Stay Updated</h2>
+            <p class="text-white/70 mb-8">Subscribe to our newsletter for exclusive offers, seasonal promotions, and travel tips.</p>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" id="newsletterEmail" required class="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 newsletter-input focus:outline-none focus:border-gold-500" placeholder="Enter your email address">
+                <button type="submit" class="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-bold rounded-xl hover:shadow-lg hover:shadow-gold-400/30 transition-all transform hover:scale-105">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white pt-20 pb-8 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="font-playfair text-navy-900 font-bold text-lg">GS</span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold">Grand Swiss</h3>
+                            <p class="text-xs text-gold-400 tracking-widest uppercase">Hotel & Apartments</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Experience luxury, comfort, and excellence in the heart of Johar Town, Lahore. Your home away from home.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Home</a></li>
+                        <li><a href="#about" class="footer-link text-gray-400 hover:text-gold-400 text-sm">About Us</a></li>
+                        <li><a href="#rooms" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Rooms & Suites</a></li>
+                        <li><a href="#amenities" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Amenities</a></li>
+                        <li><a href="#gallery" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Gallery</a></li>
+                        <li><a href="#booking" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Airport Transfer</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Room Service</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Conference Facilities</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Laundry Service</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Car Rental</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Tour Assistance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span class="text-gray-400 text-sm">MA, 756-G4 Fatimiyya Road, Block G4, Phase 2, Johar Town, Lahore</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+923036311489" class="text-gray-400 text-sm hover:text-gold-400 transition-colors">+92 303 6311489</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <a href="mailto:info@grandswisslahore.com" class="text-gray-400 text-sm hover:text-gold-400 transition-colors">info@grandswisslahore.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm"> Grand Swiss Hotel & Apartments Lahore. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923036311489" target="_blank" class="fixed bottom-6 right-6 z-[9990] w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:scale-110 transition-transform pulse-ring">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span id="toastMessage">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-24 right-6 z-[9990] w-12 h-12 bg-navy-500 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-gold-500 hover:text-navy-900">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 xl:px-12 bg-silver-50 dark:bg-navy-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                    <span class="text-gold-500 font-semibold text-sm uppercase tracking-widest">Get in Touch</span>
+                    <div class="w-12 h-[2px] bg-gold-500"></div>
+                </div>
+                <h2 class="section-title font-playfair text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4">
+                    Contact <span class="text-gold-gradient">Us</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    We are here to assist you. Reach out to us for inquiries, reservations, or any assistance you may need.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info Cards -->
+                <div class="space-y-6 reveal">
+                    <div class="contact-card bg-white dark:bg-navy-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-navy-700 flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Address</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                MA, 756-G4 Fatimiyya Road, Block G4, Phase 2<br>
+                                Johar Town, Lahore, Punjab, Pakistan
+                            </p>
+                            <p class="text-xs text-gold-500 mt-1">Plus Code: F799+VW Lahore</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-white dark:bg-navy-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-navy-700 flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Phone</h3>
+                            <a href="tel:+923036311489" class="text-gray-600 dark:text-gray-300 text-sm hover:text-gold-500 transition-colors">+92 303 6311489</a>
+                            <p class="text-xs text-gray-400 mt-1">Available 24/7 for reservations</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-white dark:bg-navy-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-navy-700 flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Email</h3>
+                            <a href="mailto:info@grandswisslahore.com" class="text-gray-600 dark:text-gray-300 text-sm hover:text-gold-500 transition-colors">info@grandswisslahore.com</a>
+                            <p class="text-xs text-gray-400 mt-1">We respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card bg-white dark:bg-navy-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-navy-700 flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-100 to-gold-50 dark:from-gold-900/30 dark:to-gold-800/20 flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 dark:text-white mb-1">Check-In / Check-Out</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                Check-In: <span class="font-semibold">2:00 PM</span> | Check-Out: <span class="font-semibold">10:00 AM</span>
+                            </p>
+                            <p class="text-xs text-gray-400 mt-1">Early check-in available on request</p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Quick Contact -->
+                    <a href="https://wa.me/923036311489" target="_blank" class="flex items-center justify-center gap-3 w-full py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-all transform hover:scale-[1.02] shadow-lg shadow-green-500/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Contact Form & Map -->
+                <div class="space-y-8 reveal" style="transition-delay: 0.2s">
+                    <!-- Contact Form -->
+                    <div class="bg-white dark:bg-navy-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-navy-700">
+                        <h3 class="font-playfair text-2xl font-bold text-navy-900 dark:text-white mb-6">Send us a Message</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                                    <input type="text" id="contactName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all text-sm" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                                    <input type="email" id="contactEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all text-sm" placeholder="your@email.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                                <input type="text" id="contactSubject" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all text-sm" placeholder="How can we help?">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                                <textarea id="contactMessage" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-navy-700 bg-gray-50 dark:bg-navy-700 text-navy-900 dark:text-white input-focus transition-all resize-none text-sm" placeholder="Your message..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-gradient-to-r from-navy-500 to-navy-700 text-white font-semibold rounded-xl hover:shadow-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Map -->
+                    <div class="map-container h-80 shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8885944952594!2d74.2734!3d31.4697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919015f82b0b86f%3A0x2f7e5c7e5e5e5e5e!2sJohar%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 xl:px-12 bg-navy-500">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-white mb-4">Stay Updated</h2>
+            <p class="text-white/60 mb-8">Subscribe to our newsletter for exclusive offers, updates, and travel tips.</p>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" id="newsletterEmail" required class="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 newsletter-input transition-all" placeholder="Enter your email address">
+                <button type="submit" class="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-bold rounded-xl hover:shadow-lg hover:shadow-gold-400/30 transition-all transform hover:scale-105">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <span class="font-playfair text-navy-900 font-bold text-xl">GS</span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold">Grand Swiss</h3>
+                            <p class="text-xs text-gold-400 tracking-widest uppercase">Hotel & Apartments</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Experience luxury, comfort, and excellence in the heart of Johar Town, Lahore. Your home away from home.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Home</a></li>
+                        <li><a href="#about" class="footer-link text-gray-400 hover:text-gold-400 text-sm">About Us</a></li>
+                        <li><a href="#rooms" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Rooms & Suites</a></li>
+                        <li><a href="#amenities" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Amenities</a></li>
+                        <li><a href="#gallery" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Gallery</a></li>
+                        <li><a href="#booking" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Room Service</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Airport Transfer</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Conference Facilities</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Laundry Service</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Car Rental</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-gold-400 text-sm">Tour Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span class="text-gray-400 text-sm">MA, 756-G4 Fatimiyya Road, Block G4, Phase 2, Johar Town, Lahore</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+923036311489" class="text-gray-400 text-sm hover:text-gold-400 transition-colors">+92 303 6311489</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <a href="mailto:info@grandswisslahore.com" class="text-gray-400 text-sm hover:text-gold-400 transition-colors">info@grandswisslahore.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    &copy; 2026 Grand Swiss Hotel & Apartments Lahore. All rights reserved.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gold-400 text-sm transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923036311489" target="_blank" class="fixed bottom-6 right-6 z-[9990] w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all pulse-ring">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span id="toastMessage">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Hide loading screen
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1500);
+
+            // Set default dates for booking widget
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+
+            document.getElementById('checkInDate').valueAsDate = today;
+            document.getElementById('checkOutDate').valueAsDate = tomorrow;
+
+            // Initialize all functionality
+            initScrollProgress();
+            initNavbar();
+            initMobileMenu();
+            initDarkMode();
+            initRevealAnimations();
+            initCounterAnimations();
+            initGalleryFilter();
+            initReviewsCarousel();
+            initLightbox();
+            initForms();
+            initSmoothScroll();
+            initImageLoading();
+        });
+
+        // Scroll Progress Bar
+        function initScrollProgress() {
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+            });
+        }
+
+        // Navbar Scroll Effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            const navInner = document.getElementById('navInner');
+            const urgencyBanner = document.getElementById('urgencyBanner');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('glass-dark');
+                    navInner.classList.add('py-2');
+                    navInner.classList.remove('py-4');
+                    urgencyBanner.classList.remove('-translate-y-full');
+                } else {
+                    navbar.classList.remove('glass-dark');
+                    navInner.classList.remove('py-2');
+                    navInner.classList.add('py-4');
+                    urgencyBanner.classList.add('-translate-y-full');
+                }
+            });
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            const toggle = document.getElementById('mobileMenuToggle');
+            const menu = document.getElementById('mobileMenu');
+            const close = document.getElementById('mobileMenuClose');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const links = document.querySelectorAll('.mobile-nav-link');
+
+            function openMenu() {
+                menu.classList.add('open');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                menu.classList.remove('open');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+                document.body.style.overflow = '';
+            }
+
+            toggle.addEventListener('click', openMenu);
+            close.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+            links.forEach(link => link.addEventListener('click', closeMenu));
+        }
+
+        // Dark Mode Toggle
+        function initDarkMode() {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+
+            // Check system preference or saved preference
+            if (localStorage.getItem('darkMode') === 'true' || 
+                (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                localStorage.setItem('darkMode', html.classList.contains('dark'));
+            });
+        }
+
+        // Reveal Animations on Scroll
+        function initRevealAnimations() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        // Counter Animations
+        function initCounterAnimations() {
+            const counters = document.querySelectorAll('.counter-value');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        animateCounter(entry.target, target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (target === 50 ? '+' : target === 350 ? '+' : target === 15 ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Gallery Filter
+        function initGalleryFilter() {
+            const filters = document.querySelectorAll('.gallery-filter');
+            const items = document.querySelectorAll('.gallery-item');
+
+            filters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    // Update active state
+                    filters.forEach(f => f.classList.remove('gallery-filter-active'));
+                    filter.classList.add('gallery-filter-active');
+
+                    const category = filter.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        // Reviews Carousel
+        function initReviewsCarousel() {
+            const track = document.getElementById('reviewsTrack');
+            const prevBtn = document.getElementById('prevReview');
+            const nextBtn = document.getElementById('nextReview');
+            let currentIndex = 0;
+            const cardWidth = 416; // card width + gap
+
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                const maxIndex = track.children.length - 1;
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateCarousel();
+                } else {
+                    currentIndex = 0;
+                    updateCarousel();
+                }
+            });
+
+            // Auto-scroll
+            setInterval(() => {
+                const maxIndex = track.children.length - 1;
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }, 5000);
+        }
+
+        // Lightbox
+        function initLightbox() {
+            window.openLightbox = function(element) {
+                const img = element.querySelector('img');
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightboxImg');
+
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeLightbox = function() {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // Forms
+        function initForms() {
+            // Booking Form
+            document.getElementById('bookingForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Reservation request submitted! We will contact you shortly to confirm your booking.');
+                e.target.reset();
+            });
+
+            // Contact Form
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Message sent successfully! We will get back to you within 24 hours.');
+                e.target.reset();
+            });
+
+            // Newsletter Form
+            document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Thank you for subscribing! You will receive our latest updates.');
+                e.target.reset();
+            });
+
+            // Check Availability Button
+            document.getElementById('checkAvailabilityBtn').addEventListener('click', () => {
+                const checkIn = document.getElementById('checkInDate').value;
+                const checkOut = document.getElementById('checkOutDate').value;
+
+                if (!checkIn || !checkOut) {
+                    showToast('Please select both check-in and check-out dates.');
+                    return;
+                }
+
+                if (new Date(checkIn) >= new Date(checkOut)) {
+                    showToast('Check-out date must be after check-in date.');
+                    return;
+                }
+
+                showToast('Checking availability... Rooms are available for your selected dates!');
+
+                // Scroll to booking section
+                document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        // Smooth Scroll
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // Image Loading
+        function initImageLoading() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                }
+            });
+        }
+
+        // Book Room Function
+        function bookRoom(roomName, price) {
+            document.getElementById('bookingRoomType').value = roomName.toLowerCase().replace(' ', '-');
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+            showToast(`You selected ${roomName}. Please complete your reservation details.`);
+        }
+    </script>
+</body>
+</html>
